@@ -1,0 +1,28 @@
+img{
+    border-radius: 75px;
+  }
+  h2{
+    font-size: 18px;
+  }
+  body{
+    background-color: rgb(77, 61, 176);
+    font-family: 'Trebuchet MS';
+    color: rgb(130, 180, 38);
+    text-align: center;
+    
+  }
+  
+  .form-container{
+    color: rgb(15, 16, 16);
+    background-color: rgb(38, 156, 215);
+    margin: 0px 250px 0px 250px;
+    text-align: center;
+    a
+    {
+      background-color: brown;
+      align-items: center;
+      width: 10px;
+      height: 20%;
+    }
+    
+  }
