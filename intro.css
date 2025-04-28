@@ -1,0 +1,15 @@
+img{
+    border-radius: 75px;
+    image-orientation: flip;
+    align-items: center;
+}
+h2{
+    font-size: 18px;
+  }
+  body{
+    background-color: rgb(107, 91, 207);
+    font-family: 'Trebuchet MS';
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+  }
