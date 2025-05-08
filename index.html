@@ -1,125 +1,75 @@
-/* creating form using html.
-form for students */
+<!-- login form  -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <style>
-        head
-         {
-            background-color: aqua;
-        }
-
-        body {
-            background-color: aqua;
-        }
-
-        .form-container {
-            width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .form-container h2 {
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .form-group input[type="radio"] {
-            width: auto;
-        }
-
-        .form-actions {
-            text-align: center;
-        }
-
-        .form-actions button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-
-        .form-actions button:hover {
-            background-color: #45a049;
-        }
-    </style>
-    <title>Student Details Form</title>
+    <title>Modern login form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="form-container">
-        <h2>Student Details Form</h2>
-        <form action="/submit-student-details" method="POST">
-            <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="" id="text" name="name" required>
+    <div class="container">
+        <div class="login-container">
+            <div class="left-side">
+                <div class="header">
+                    <h1>Welcome Back</h1>
+                    <p>Please login to your account</p>
+                </div>
+                <form class="form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Enter your password">
+                            <i class="fas fa-eye toggle-password"></i>
+                        </div>
+                    </div>
+                    <div class="options">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember-me</label>
+                        </div>
+                        <a href="#" class="forgot-password?"></a>
+                    </div>
+                    <button type="submit" class="
+                    login-btn">Login</button>
+                    <div class="social-login">
+                        <p>or login with</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="signup-link">
+                        Don't have an account?<a href="#">Sign up</a>
+                    </div>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+            <div class="right-side">
+                <div class="overlay">
+                    <h2>Hello, Friend!</h2>
+                    <p>Enter your personal detail and start your journey with us</p>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
             </div>
-
-        <div class="form-group">
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required>
-            </div>
-
-            <div class="form-group">
-                <label>Gender:</label>
-                <input type="radio" id="male" name="gender" value="male" required>
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female" required>
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other" required>
-                <label for="other">Other</label>
-            </div>
-
-            <div class="form-group">
-                <label for="course">Course:</label>
-                <select id="course" name="course" required>
-                    <option value="" disabled selected>Select a course</option>
-                    <option value="computer-science">Computer engineering</option>
-                    <option value="mathematics">civil engineering</option>
-                    <option value="biology">software engineering</option>
-                    <option value="business">civil and rural engineering</option>
-                </select>
-            </div>
-
-            <div class="form-actions">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+        </div>
     </div>
+    <script>
+        document.querySelector('.toggle-password').addEventListener('click', function()
+        {
+            const passwordInput=document.getElementById('password');
+            const type=passwordInput.getAttribute('type')==='password'?'text':'password';
+            passwordInput.setAttribute('type',type);
+            this.classList.toggle('fa-eye-slash');
+        })
+    </script>
 </body>
-
-</html>
-
-</body>
-
 </html>
