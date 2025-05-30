@@ -1,9 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 #navbar{
     height: 60px;
-    background-color: navajowhite;
+    background: navajowhite;
     border: 2px solid  rgb(208, 133, 20);
     border-radius: 20px;
     padding: 20px 200px 20px 200px;
+    justify-content: center;
+    align-items: center;
 }
 button{
     background-color: #f08804;
