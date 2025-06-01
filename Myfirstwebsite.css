@@ -1,24 +1,93 @@
-*{
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-#navbar{
-    height: 60px;
-    background: navajowhite;
-    border: 2px solid  rgb(208, 133, 20);
-    border-radius: 20px;
-    padding: 20px 200px 20px 200px;
-    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #054258, #0a7589, #b3e5e5);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-button{
-    background-color: #f08804;
+
+/* Navigation bar */
+#navbar {
+    background-color: #054258;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-
-a{
-    margin: 200px 50px ;
+/* Navigation links — evenly spaced and full-width */
+#navbar a {
+    flex: 1;
+    text-align: center;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 20px;
+    padding: 16px 0;
+    font-size: 18px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Remove border from last link */
+#navbar a:last-child {
+    border-right: none;
+}
+
+/* Hover effect */
+#navbar a:hover {
+    background-color: #0a7589;
+    color: #fffacd; /* light golden */
+}
+
+/* Optional content styling */
+.content {
+    margin-top: 50px;
+    color: #ffffff;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+    background-color: rgba(5, 66, 88, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* optional: slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply to all headings */
+h1, h2, h4 {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 3.5s ease forwards;
+}
+
+/* Add delay to each heading */
+h1 {
+    animation-delay: 0.1s;
+}
+
+h2:first-of-type {
+    animation-delay: 0.6s;
+}
+
+h4:first-of-type {
+    animation-delay: 1s;
+}
+
+h4:last-of-type {
+    animation-delay: 1.4s;
+}
+
+h2:last-of-type {
+    animation-delay: 1.8s;
+}
+
