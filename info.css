@@ -3,6 +3,7 @@
 }
 body{
     text-align: center;
+    background: transparent;
     
 }
 h1{
@@ -13,8 +14,63 @@ h4{
 }
 h1, h2 {
     color: #FFD700; 
+    background: transparent;
 }
 
-h4, p {
+h4{
+    color:black; 
+    background: transparent;
+}
+ p {
     color: #F0F8FF; 
+    background: transparent;
+    color: bl;
+ 
+}
+   @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* optional: slight upward motion */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+h1, h2, h4 {
+    opacity: 0; /* Start hidden */
+    animation: fadeIn 3.5s ease forwards;
+}
+
+/* Add delay to each heading */
+h1 {
+    animation-delay: 0.1s;
+}
+h2:first-of-type {
+    animation-delay: 0.3s;
+}
+
+h4:first-of-type {
+    animation-delay: 1.9s;
+}
+
+h4:last-of-type {
+    animation-delay: 2.9s;
+}
+
+h2:last-of-type {
+    animation-delay: 1.2s;
+}
+#info-list:last-of-type{
+    animation-delay: 2.5s;
+}
+#info-list:first-of-type{
+    animation-delay: 0.5s;
+}
+#info-list li {
+    list-style-type: none;
+    background: transparent;
+    font-size: larger;
+    color: #F0F8FF; /* AliceBlue */
+    padding: 5px;   
 }
