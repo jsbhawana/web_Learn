@@ -3,3 +3,12 @@ p{
     background: transparent;
     text-align: justify;
 }
+#academics{
+    width: 100%;
+    height: 100%;
+    color: navy;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    background-size: cover;
+}
